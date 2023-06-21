@@ -25,7 +25,7 @@ public class NoteController {
         noteService.addNote(noteDto, userId);
     }
     //delete a note
-    @DeleteMapping("/{noteId")
+    @DeleteMapping("/{noteId}")
     public void deleteNoteById(@PathVariable Long noteId){
         noteService.deleteNoteById(noteId);
     }

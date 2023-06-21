@@ -32,7 +32,7 @@ public class UserServiceImpl implements UserService {
         //invoke saveAndFlush() method available in userRepository and pass in user object
         userRepository.saveAndFlush(user);
         //add a string to response with a success message
-        response.add("User successfully added");
+        response.add("http://localhost:8080/login.html");
         return response;
     }
     //NEW METHOD TO HANDLE USER LOGIN-----------------------------------------------
@@ -43,7 +43,7 @@ public class UserServiceImpl implements UserService {
         Optional<User> userOptional = userRepository.findByUsername(userDto.getUsername());
         //conditional logic to check to see if userOptional is present
         if(userOptional.isPresent()){
-            response.add("User Login Successful");
+            response.add("http://localhost:8080/home.html");
             response.add(String.valueOf(userOptional.get().getId()));
         }
         else {

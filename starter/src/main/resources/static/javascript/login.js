@@ -29,4 +29,6 @@ const handleSubmit = async(e) =>{
         window.location.replace(responseArr[0])
     }
 }
+
+
 loginForm.addEventListener("submit", handleSubmit)
